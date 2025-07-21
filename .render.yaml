@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: caution-api
+    env: java
+    plan: free
+    buildCommand: "./gradlew build -x test"
+    startCommand: "java -jar build/libs/*.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
